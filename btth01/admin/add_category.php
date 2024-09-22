@@ -1,10 +1,13 @@
-
 <?php
 session_start(); // Bắt đầu phiên làm việc
 include 'db.php'; // Kết nối cơ sở dữ liệu
 
 // Kiểm tra xem yêu cầu POST có được gửi không
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (!hash_equals($_SESSION['csrf_token'], $_POST['csrf_token'])) {
+        die("CSRF token không hợp lệ.");
+    } 
+
     // Nhận tên thể loại từ biểu mẫu
     $ten_tloai = $_POST['txtCatName'];
 
@@ -88,7 +91,7 @@ $conn->close();
                         <span class="input-group-text" id="lblCatName">Tên thể loại</span>
                         <input type="text" class="form-control" name="txtCatName" required>
                     </div>
-                    <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
+                    <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token'];?>">
 
                     <div class="form-group float-end">
                         <input type="submit" value="Thêm" class="btn btn-success">
