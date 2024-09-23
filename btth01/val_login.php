@@ -4,7 +4,7 @@
 $servername = "localhost"; // Thay bằng thông tin server của bạn
 $username = "root";        // Thay bằng username cơ sở dữ liệu
 $password = "";            // Thay bằng mật khẩu cơ sở dữ liệu
-$dbname = "btth01_cse485_ex"; // Thay bằng tên cơ sở dữ liệu của bạn
+$dbname = "btth01_cse485"; // Thay bằng tên cơ sở dữ liệu của bạn
 
 // Tạo kết nối
 $conn = new mysqli($servername, $username, $password, $dbname);
