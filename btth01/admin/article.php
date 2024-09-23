@@ -3,7 +3,7 @@
 $servername = "localhost"; // hoặc 127.0.0.1
 $username = "root"; // Tên đăng nhập MySQL
 $password = ""; // Mật khẩu MySQL
-$dbname = "btth01_cse485_ex"; // Tên cơ sở dữ liệu
+$dbname = "btth01_cse485"; // Tên cơ sở dữ liệu
 
 // Tạo kết nối
 $conn = new mysqli($servername, $username, $password, $dbname);
