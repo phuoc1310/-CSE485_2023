@@ -2,6 +2,9 @@
 session_start(); // Bắt đầu phiên làm việc
 include 'db.php'; // Kết nối cơ sở dữ liệu
 
+if (empty($_SESSION['csrf_token'])) {
+    $_SESSION['csrf_token'] = bin2hex(random_bytes(32)); // Tạo một token ngẫu nhiên
+}
 // Kiểm tra xem yêu cầu POST có được gửi không
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (!hash_equals($_SESSION['csrf_token'], $_POST['csrf_token'])) {
