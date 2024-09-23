@@ -13,7 +13,7 @@
 $servername = "localhost";
 $username = "root"; // Tên người dùng MySQL
 $password = ""; // Mật khẩu MySQL
-$dbname = "btth01_cse485_ex"; // Tên cơ sở dữ liệu của bạn
+$dbname = "btth01_cse485"; // Tên cơ sở dữ liệu của bạn
 
 try {
     // Tạo kết nối MySQLi
