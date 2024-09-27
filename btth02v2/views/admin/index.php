@@ -31,7 +31,7 @@
                         <a class="nav-link" href="/btth02v2/controllers/CategoryController.php">Thể loại</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="author.php">Tác giả</a>
+                        <a class="nav-link" href="/btth02v2/controllers/AuthorController.php">Tác giả</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/btth02v2/controllers/ArticleController.php">Bài viết</a>
